@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Apapacho - Educar para prevenir, acompañar para sanar.</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAzFBMVEX////AAD/oQD/vQD/tgD/pAD7Tgb/ngD/qAD+Zwr/ogD/nwD/rgD/qgD8VQf/ogD/qgD/qgD/AAD9XAf/qAD/qAD/qAD+YAj/pAD/ogD/qQD/qAD/qAD/pQD/qgD/qAD/qAD/pAD/pAD/qAD/qAD/pgD/qAD/qAD/qgD/qAD/qgD/qgD/pAD/qAD/pwD/qAD/pQD/qAD/qAD/qQD/qAD/qAD/qgD/pgD/qAD/qAD/qQD/qgD/qAD/qgD/qQD/qgD/qAD+Ygjwj2D+ZAn9Wwf7TgboilisAAAARXRSTlMAAQIDBAUGBwgJCgsMDQ4PEBESExQVFhcYGRobHB0eHyEiJCUnKiwtLi8wMTQ2Nzg5Ojs8PT5AQURHSUpLTlJbX2Nma3BzdXh6fLq8HTQAAAABYktHRLfdADtnAAABVklEQVQ4y42T13aCMBCG/58SSisK2l4BFVFx7733vv//F3gDk+sMODk5+z5JsjN5XgBApdXqU1Wlcvv84ZpD/L6hUNi1atVKpVRyWp3WzACADwD4fL7s27dv2bJly5atX28AoFKpVLp06VatVr16/YYBABwA+Hy+ZMmyZctWrd/An3/AAnMmAADQ6XRarVYAWK1Wo9E4nQ4A4DUA+Hw+gUDAM5kMBoNhMpmAYAYADIZDIBDwAQC/32+1WmAaZDKZDAaD3+/3+/0+AQCj0WixWJTOAgBAo9E4nU6z2cwBALjdbpesVqvVal0ul4uFAEC5XKVSqWaz2Ww2AADkcrksFotGo3G5XLfbDQDgcfcIBAKBwWAwmUwul2u12u12o9EAgA4ADofDbrfL5XK5XO73+wEAjDE/CgQCAZ/PBwD8fr+9vb19fX18fHz+/v4BABwcHBw8PDw8PLy8vLy+vr4+Pj4+AGDIb5L8+32Awv0HlP8BcwE3NH4S0aYAAAAASUVORK5CYII=" type="image/png">
+
+    <!-- Configuración personalizada de Tailwind CSS -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-teal': '#009688',
+                        'brand-yellow': '#ffc107',
+                        'brand-purple': '#9c27b0',
+                        'brand-orange': '#ff5722',
+                        'brand-red': '#f44336',
+                        'brand-pink': '#e91e63',
+                        'brand-blue': '#2196f3',
+                    },
+                    fontFamily: {
+                        'sans': ['Poppins', 'sans-serif'],
+                        'display': ['Nunito', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background-image: url('https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=2187&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center 60%;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header / Navegación -->
+    <header class="bg-white/90 backdrop-blur-md fixed top-0 left-0 right-0 z-50 shadow-md">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <!-- Logo -->
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAzFBMVEX////AAD/oQD/vQD/tgD/pAD7Tgb/ngD/qAD+Zwr/ogD/nwD/rgD/qgD8VQf/ogD/qgD/qgD/AAD9XAf/qAD/qAD/qAD+YAj/pAD/ogD/qQD/qAD/qAD/pQD/qgD/qAD/qAD/pAD/pAD/qAD/qAD/pgD/qAD/qAD/qgD/qAD/qgD/qgD/pAD/qAD/pwD/qAD/pQD/qAD/qAD/qQD/qAD/qAD/qgD/pgD/qAD/qAD/qQD/qgD/qAD/qgD/qQD/qgD/qAD+Ygjwj2D+ZAn9Wwf7TgboilgrF8mTAAAARXRSTlMAAQIDBAUGBwgJCgsMDQ4PEBESExQVFhcYGRobHB0eHyEiJCUnKiwtLi8wMTQ2Nzg5Ojs8PT5AQURHSUpLTlJbX2Nma3BzdXh6fLq8HTQAAAABYktHRLfdADtnAAABVklEQVQ4y42T13aCMBCG/58SSisK2l4BFVFx7733vv//F3gDk+sMODk5+z5JsjN5XgBApdXqU1Wlcvv84ZpD/L6hUNi1atVKpVRyWp3WzACADwD4fL7s27dv2bJly5atX28AoFKpVLp06VatVr16/YYBABwA+Hy+ZMmyZctWrd/An3/AAnMmAADQ6XRarVYAWK1Wo9E4nQ4A4DUA+Hw+gUDAM5kMBoNhMpmAYAYADIZDIBDwAQC/32+1WmAaZDKZDAaD3+/3+/0+AQCj0WixWJTOAgBAo9E4nU6z2cwBALjdbpesVqvVal0ul4uFAEC5XKVSqWaz2Ww2AADkcrksFotGo3G5XLfbDQDgcfcIBAKBwWAwmUwul2u12u12o9EAgA4ADofDbrfL5XK5XO73+wEAjDE/CgQCAZ/PBwD8fr+9vb19fX18fHz+/v4BABwcHBw8PDw8PLy8vLy+vr4+Pj4+AGDIb5L8+32Awv0HlP8BcwE3NH4S0aYAAAAASUVORK5CYII=" alt="Logo Nova Apapacho" class="h-12 w-12">
+                <span class="text-2xl font-display font-black text-brand-teal">Nova Apapacho</span>
+            </a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#nosotros" class="text-gray-600 hover:text-brand-pink transition font-semibold">Nosotros</a>
+                <a href="#mision" class="text-gray-600 hover:text-brand-pink transition font-semibold">Misión</a>
+                <a href="#localizacion" class="text-gray-600 hover:text-brand-pink transition font-semibold">Ubicación</a>
+                <a href="#contacto" class="bg-brand-pink text-white py-2 px-5 rounded-full hover:bg-brand-purple transition shadow-lg font-bold">Contacto</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-gray-800">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <!-- Menú Móvil -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+            <a href="#nosotros" class="block text-gray-600 hover:text-brand-pink transition py-2 font-semibold">Nosotros</a>
+            <a href="#mision" class="block text-gray-600 hover:text-brand-pink transition py-2 font-semibold">Misión</a>
+            <a href="#localizacion" class="block text-gray-600 hover:text-brand-pink transition py-2 font-semibold">Ubicación</a>
+            <a href="#contacto" class="block mt-2 bg-brand-pink text-white py-2 px-4 rounded-full hover:bg-brand-purple transition shadow text-center font-bold">Contacto</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero-bg min-h-screen flex items-center justify-center text-white pt-20">
+            <div class="bg-black/60 absolute inset-0"></div>
+            <div class="text-center z-10 p-6 container mx-auto">
+                <h1 class="text-4xl md:text-6xl font-display font-black mb-4 leading-tight">Bienvenidos a Nova Apapacho</h1>
+                <p class="text-xl md:text-3xl font-display font-bold text-brand-yellow mb-8">Educar para prevenir, acompañar para sanar.</p>
+                <p class="max-w-3xl mx-auto text-lg md:text-xl font-light mb-10">Un espacio seguro, amoroso y especializado en el bienestar integral de niñas, niños y adolescentes. Aquí creemos que el cuidado, la empatía y la intervención profesional pueden transformar vidas.</p>
+                <a href="#nosotros" class="bg-white text-brand-pink font-bold py-3 px-8 rounded-full text-lg hover:bg-yellow-100 transition shadow-lg transform hover:scale-105">
+                    Conoce más
+                </a>
+            </div>
+        </section>
+
+        <!-- Nosotros -->
+        <section id="nosotros" class="py-24 bg-white">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1519340333755-56e9c1d04579?q=80&w=2148&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Niños aprendiendo en un entorno seguro" class="rounded-lg shadow-2xl mx-auto w-full">
+                </div>
+                <div class="text-left">
+                    <h2 class="text-4xl font-display font-bold text-brand-teal mb-6">Nuestra Historia</h2>
+                    <p class="mb-4 text-lg text-gray-700">Somos una <strong>Asociación Civil fundada en 2017</strong> que desarrolla programas de prevención de violencia y abuso sexual en primaria, secundaria y preparatoria.</p>
+                    <p class="mb-6 text-lg text-gray-700">Nuestro objetivo es crear entornos seguros para niñas, niños y adolescentes, brindándoles herramientas para su protección y desarrollo integral.</p>
+                    <div class="bg-red-100 border-l-4 border-brand-red p-6 rounded-r-lg">
+                        <h3 class="text-xl font-bold text-brand-red mb-2">Una Realidad Alarmante</h3>
+                        <p class="text-gray-800">En México, la violencia infantil es un problema grave. En 2022 el INEGI registró más de <strong>70 mil casos de violencia contra menores</strong>, y la CNDH reportó más de <strong>11 mil casos de abuso sexual infantil</strong>. Es nuestra misión cambiar esta realidad.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Frases Motivacionales -->
+        <section id="frases" class="py-20 bg-brand-teal text-white">
+            <div class="container mx-auto px-6 text-center">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <div class="p-6">
+                        <p class="text-3xl font-display font-bold">"Un apapacho puede cambiar una vida."</p>
+                    </div>
+                    <div class="p-6 border-y-2 border-brand-yellow md:border-y-0 md:border-x-2">
+                        <p class="text-3xl font-display font-bold">"Cada niña y niño merece crecer sin miedo."</p>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-3xl font-display font-bold">"Educar para prevenir, acompañar para sanar."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Misión -->
+        <section id="mision" class="py-24">
+             <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-left">
+                    <h2 class="text-4xl font-display font-bold text-brand-purple mb-6">¿Qué Hacemos?</h2>
+                    <ul class="space-y-4 text-lg">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-brand-yellow mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <span><strong>Programas de Prevención:</strong> Talleres y pláticas en escuelas para identificar y prevenir la violencia y el abuso.</span>
+                        </li>
+                         <li class="flex items-start">
+                            <svg class="w-6 h-6 text-brand-yellow mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <span><strong>Intervención Especializada:</strong> Terapia y acompañamiento psicológico para sanar las heridas del pasado.</span>
+                        </li>
+                         <li class="flex items-start">
+                            <svg class="w-6 h-6 text-brand-yellow mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <span><strong>Creación de Entornos Seguros:</strong> Capacitamos a padres, madres y docentes para que sean agentes de cambio.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1576765974102-b756024a14d4?q=80&w=2187&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Manos de un adulto y un niño" class="rounded-lg shadow-2xl mx-auto w-full">
+                </div>
+            </div>
+        </section>
+
+        <!-- Localización -->
+        <section id="localizacion" class="py-24 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                     <h2 class="text-4xl font-display font-bold text-brand-blue mb-4">Encuéntranos</h2>
+                     <p class="text-lg text-gray-600 max-w-3xl mx-auto">Nuestra sede se encuentra en <strong>Toluca, Estado de México</strong>, un lugar donde el compromiso con la infancia y la comunidad se vive día a día.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 items-start">
+                    <!-- Mapa -->
+                    <div class="w-full h-96 rounded-lg shadow-lg overflow-hidden">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120436.4150531206!2d-99.73010174335937!3d19.287864700000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd89831f24e6c3%3A0xda13f338f0ed815!2sToluca%20de%20Lerdo%2C%20M%C3%A9x.!5e0!3m2!1ses-419!2smx!4v1700688941295!5m2!1ses-419!2smx" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <!-- Información -->
+                    <div id="contacto" class="bg-white p-8 rounded-lg shadow-lg">
+                        <div class="space-y-6">
+                             <div>
+                                <h3 class="text-xl font-bold text-brand-blue mb-2">Dirección Física</h3>
+                                <p class="text-gray-700">[Calle, número, colonia, código postal]</p>
+                            </div>
+                             <div>
+                                <h3 class="text-xl font-bold text-brand-blue mb-2">Horario de Atención</h3>
+                                <p class="text-gray-700"><strong>Lunes a Viernes:</strong> 9:00 a.m. a 6:00 p.m.</p>
+                                <p class="text-gray-700"><strong>Sábados:</strong> 9:00 a.m. a 1:00 p.m.</p>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-brand-blue mb-2">Contacto Directo</h3>
+                                <p class="text-gray-700"><strong>Teléfono:</strong> <a href="tel:7222898052" class="hover:underline">722 289 8052</a></p>
+                                <p class="text-gray-700"><strong>Correo:</strong> <a href="mailto:asociacionapapachomexicoiap@gmail.com" class="hover:underline break-all">asociacionapapachomexicoiap@gmail.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAzFBMVEX////AAD/oQD/vQD/tgD/pAD7Tgb/ngD/qAD+Zwr/ogD/nwD/rgD/qgD8VQf/ogD/qgD/qgD/AAD9XAf/qAD/qAD/qAD+YAj/pAD/ogD/qQD/qAD/qAD/pQD/qgD/qAD/qAD/pAD/pAD/qAD/qAD/pgD/qAD/qAD/qgD/qAD/qgD/qgD/pAD/qAD/pwD/qAD/pQD/qAD/qAD/qQD/qAD/qAD/qgD/pgD/qAD/qAD/qQD/qgD/qAD/qgD/qQD/qgD/qAD+Ygjwj2D+ZAn9Wwf7TgboilgrF8mTAAAARXRSTlMAAQIDBAUGBwgJCgsMDQ4PEBESExQVFhcYGRobHB0eHyEiJCUnKiwtLi8wMTQ2Nzg5Ojs8PT5AQURHSUpLTlJbX2Nma3BzdXh6fLq8HTQAAAABYktHRLfdADtnAAABVklEQVQ4y42T13aCMBCG/58SSisK2l4BFVFx7733vv//F3gDk+sMODk5+z5JsjN5XgBApdXqU1Wlcvv84ZpD/L6hUNi1atVKpVRyWp3WzACADwD4fL7s27dv2bJly5atX28AoFKpVLp06VatVr16/YYBABwA+Hy+ZMmyZctWrd/An3/AAnMmAADQ6XRarVYAWK1Wo9E4nQ4A4DUA+Hw+gUDAM5kMBoNhMpmAYAYADIZDIBDwAQC/32+1WmAaZDKZDAaD3+/3+/0+AQCj0WixWJTOAgBAo9E4nU6z2cwBALjdbpesVqvVal0ul4uFAEC5XKVSqWaz2Ww2AADkcrksFotGo3G5XLfbDQDgcfcIBAKBwWAwmUwul2u12u12o9EAgA4ADofDbrfL5XK5XO73+wEAjDE/CgQCAZ/PBwD8fr+9vb19fX18fHz+/v4BABwcHBw8PDw8PLy8vLy+vr4+Pj4+AGDIb5L8+32Awv0HlP8BcwE3NH4S0aYAAAAASUVORK5CYII=" alt="Logo Nova Apapacho" class="h-16 w-16 mx-auto mb-4">
+            <p>&copy; 2024 Nova Apapacho A.C. Todos los derechos reservados.</p>
+            <p class="text-sm text-gray-400 mt-2">Un refugio seguro para la niñez y adolescencia.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Script para el menú móvil
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Opcional: Cerrar menú al hacer clic en un enlace
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
+
